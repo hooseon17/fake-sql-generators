@@ -1,17 +1,5 @@
 /.DS_Store
-/equipment.sql
 /fitness_form.html
-/healthrecord.sql
-/invoice.sql
-/invoice_line.sql
-/lesson.sql
-/membersample.sql 2
-/membersample.sql 3
-/membership.csv
-/membership.sql
-/new_customer_inquiry.sql
-/product.sql
-/sample.sql
-/store.sql
-/trainer.csv
-/trainer.sql
+/*.txt
+/*.sql
+/*.csv

@@ -8,10 +8,10 @@ def generate_insert_query_lesson(lesson_id, entry):
 def generate_random_lesson(lesson_id):
     fake = Faker()
 
-    # Generate a random date and time between today and 1 year ago, with whole hours between 9:00 and 17:00
+    # Generate a random hour between 9:00 AM and 5:00 PM
+    start_time = random.choice([9, 10, 11, 12, 13, 14, 15, 16])
     start_date = datetime.now() - timedelta(days=random.randint(1, 365))
-    start_time = random.choice([9, 10, 11, 12, 13, 14, 15, 16, 17])
-    datetime_entry = fake.date_time_between_dates(datetime_start=start_date, datetime_end=start_date + timedelta(hours=start_time)).strftime('%Y-%m-%d %H:%M:%S')
+    datetime_entry = fake.date_time_between_dates(datetime_start=start_date, datetime_end=start_date + timedelta(hours=start_time)).replace(minute=0, second=0).strftime('%Y-%m-%d %H:%M:%S')
 
     # Generate a member ID between 1 and 5000
     member_id_entry = random.randint(1, 5000)
